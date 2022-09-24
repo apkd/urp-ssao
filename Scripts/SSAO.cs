@@ -41,10 +41,7 @@ public class SSAO : ScriptableRendererFeature
 
         public void Setup(RenderTargetIdentifier source) {
 #if UNITY_EDITOR
-            if (!Application.isPlaying)
-            {
-                ResourceReloader.TryReloadAllNullIn(this, "Packages/com.sbstn_hn.rendererfeatures.urp-ssao");
-            }
+            ResourceReloader.TryReloadAllNullIn(this, "Packages/com.sbstn_hn.rendererfeatures.urp-ssao");
 #endif 
             
             this.source = source;
